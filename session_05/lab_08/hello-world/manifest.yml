@@ -1,17 +1,24 @@
 ---
-memory: 512M
+memory: 1G 
 instances: 1
 applications:
-- name: hello-server
-  host: hello-server-${random-word}
+- name: mkim-hello-server
+  host: mkim-hello-server
   path: hello-server/target/hello-server-0.0.1-SNAPSHOT.jar
   services:
-  - service-registry
-  - config-server
-- name: hello-ui
-  host: hello-ui-${random-word}
+  - mkim-service-registry
+  - mkim-config-server
+  env:
+    TRUST_CERTS: api.run.pivotal.io
+#    CF_TARGET: api.run.pivotal.io
+- name: mkim-hello-ui
+  host: mkim-hello-ui
   path: hello-ui/target/hello-ui-0.0.1-SNAPSHOT.jar
   services:
-  - service-registry
-  - config-server
-  - circuit-breaker
+  - mkim-service-registry
+  - mkim-config-server
+  - mkim-circuit-breaker
+  env:
+    TRUST_CERTS: api.run.pivotal.io
+#    CF_TARGET: api.run.pivotal.io
+  
