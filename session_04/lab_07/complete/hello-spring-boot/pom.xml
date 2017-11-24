@@ -8,7 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>hello-spring-boot</name>
+	<name>lab07-hello-spring-boot</name>
 	<description>Hello Spring Boot</description>
 
 	<parent>

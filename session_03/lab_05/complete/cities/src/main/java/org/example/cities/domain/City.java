@@ -1,10 +1,17 @@
 package org.example.cities.domain;
 
-import javax.persistence.*;
 import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name="city")
+@lombok.Getter
+@lombok.Setter
 public class City implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -30,31 +37,5 @@ public class City implements Serializable {
     @Column
     private String longitude;
 
-    public String getName() { return name; }
-
-    public void setName(String name) { this.name = name; }
-
-    public String getPostalCode() { return postalCode; }
-
-    public void setPostalCode(String postalCode) { this.postalCode = postalCode; }
-
-    public long getId() { return id; }
-
-    public void setId(long id) { this.id = id; }
-
-    public String getStateCode() { return stateCode; }
-
-    public void setStateCode(String stateCode) { this.stateCode = stateCode; }
-
-    public String getCounty() { return county; }
-
-    public void setCounty(String county) { this.county = county; }
-
-    public String getLatitude() { return latitude; }
-
-    public void setLatitude(String latitude) { this.latitude = latitude; }
-
-    public String getLongitude() { return longitude; }
-
-    public void setLongitude(String longitude) { this.longitude = longitude; }
+    
 }
