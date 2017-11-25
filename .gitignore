@@ -13,6 +13,8 @@ local.properties
 
 
 target/
+**/target/
+**/bin/
 
 .gradle
 build/
