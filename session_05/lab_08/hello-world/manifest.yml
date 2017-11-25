@@ -6,17 +6,17 @@ applications:
   host: hello-server
   path: hello-server/target/lab08-hello-server-0.0.1-SNAPSHOT.jar
   services:
-  - service-registry
-  - config-server
+  - my-service-registry
+  - my-config-server
   env:
     TRUST_CERTS: api.run.pivotal.io
 - name: hello-ui
   host: hello-ui
   path: hello-ui/target/lab08-hello-ui-0.0.1-SNAPSHOT.jar
   services:
-  - service-registry
-  - config-server
-  - circuit-breaker
+  - my-service-registry
+  - my-config-server
+  - my-circuit-breaker
   env:
     TRUST_CERTS: api.run.pivotal.io
   

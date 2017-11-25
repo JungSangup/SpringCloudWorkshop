@@ -6,7 +6,7 @@ applications:
   instances: 1
   path: target/lab08-hello-server-0.0.1-SNAPSHOT.jar
   services:
-  - service-registry
-  - config-server
+  - my-service-registry
+  - my-config-server
   env:
     TRUST_CERTS: api.run.pivotal.io
