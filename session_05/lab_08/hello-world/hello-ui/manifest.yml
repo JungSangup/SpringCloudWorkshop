@@ -4,8 +4,10 @@ applications:
   host: hello-ui-${random-word}
   memory: 1GB
   instances: 1
-  path: target/hello-ui-0.0.1-SNAPSHOT.jar
+  path: target/lab08-hello-ui-0.0.1-SNAPSHOT.jar
   services:
   - service-registry
   - config-server
   - circuit-breaker
+  env:
+    TRUST_CERTS: api.run.pivotal.io
